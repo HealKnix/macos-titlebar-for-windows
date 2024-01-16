@@ -37,5 +37,5 @@ export default {
   '.inline-title-bar:not(.activitybar-top):not(.statusbar-top) .monaco-workbench:not(.fullscreen) .sidebar .composite.title .title-actions':
     'flex: 1 !important',
   '.inline-title-bar:not(.horizontal-activitybar) .monaco-workbench:not(.fullscreen) .activitybar:not(.right) .content':
-    'height: none !important; width: calc(var(--activity-bar-action-size) - 1px) !important; transform: none !important;'
+    'height: 100% !important; width: calc(var(--activity-bar-action-size) - 1px) !important; transform: none !important;'
 }
