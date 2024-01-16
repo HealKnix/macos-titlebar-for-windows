@@ -1,0 +1,81 @@
+{
+  "name": "macos-titlebar-for-windows",
+  "displayName": "MacOS titlebar for Windows",
+  "description": "Windows titlebar like MacOS",
+  "publisher": "healknix",
+  "icon": "src/logo.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HealKnix/macos-titlebar-for-windows"
+  },
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "macos-titlebar-for-windows.active",
+        "title": "MacOS Titlebar: Enable"
+      },
+      {
+        "command": "macos-titlebar-for-windows.disable",
+        "title": "MacOS Titlebar: Disable"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "MacOS titlebar for Windows",
+      "properties": {
+        "msc.active": {
+          "type": "boolean",
+          "default": true
+        },
+        "msc.reverseControls": {
+          "type": "boolean",
+          "default": false
+        },
+        "msc.reverseTitleBar": {
+          "type": "boolean",
+          "default": false
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@typescript-eslint/eslint-plugin": "^6.13.1",
+    "@typescript-eslint/parser": "^6.13.1",
+    "eslint": "^8.54.0",
+    "typescript": "^5.3.2",
+    "@vscode/test-cli": "^0.0.4",
+    "@vscode/test-electron": "^2.3.8"
+  },
+  "extensionDependencies": [
+    "drcika.apc-extension"
+  ],
+  "keywords": [
+    "macOS",
+    "customization",
+    "UI",
+    "design",
+    "windows",
+    "titlebar",
+    "traffic-light"
+  ]
+}
