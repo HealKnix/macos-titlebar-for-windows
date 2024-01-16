@@ -19,7 +19,7 @@ MacOS Titlebar: Disable // Disable macOS titlebar mode
 ## Example
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/healknix/macos-titlebar-for-windows/main/src/example.gif" alt="Comparison"> 
+  <img src="https://raw.githubusercontent.com/healknix/macos-titlebar-for-windows/main/src/example.gif" alt="Example"> 
 </p>
 
 **Enjoy!**
