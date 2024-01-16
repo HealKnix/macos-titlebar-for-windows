@@ -24,6 +24,12 @@ MacOS Titlebar: Disable // Disable macOS titlebar mode
 
 ## Troubleshooting
 
-The `Apc CustomizeUI++` may not be activated when first installed, so run the `Enable Apc extension` command in the Palette Command. You will be asked to restart VS Code and everything should be fine.
+The `Apc CustomizeUI++` may not be activated when first installed, so run the command in the Palette Command:
+
+```shell
+Enable Apc extention
+```
+
+You will be asked to restart VS Code and everything should be fine.
 
 **Enjoy!**
