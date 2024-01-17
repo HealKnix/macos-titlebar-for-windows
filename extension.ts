@@ -3,15 +3,10 @@ import ActiveSettings from './settings/active'
 import DisableSettings from './settings/disable'
 
 export function activate(context: vscode.ExtensionContext) {
-  ;async () => {
-    const myExtension = vscode.extensions.getExtension('healknix.macos-titlebar-for-windows')
-    const currentVersion = myExtension!.packageJSON.version ?? '0.0.0'
-
-    const lastVersion = context.globalState.get('MyExtensionVersion')
-    if (currentVersion !== lastVersion) {
-      void context.globalState.update('MyExtensionVersion', currentVersion)
-      await setupExtention()
-    }
+  const isInstall = context.globalState.get('IsMacOSTitlebarForWindowsInstall')
+  if (!isInstall) {
+    void context.globalState.update('IsMacOSTitlebarForWindowsInstall', true)
+    setupExtention()
   }
 
   let disposableActive = vscode.commands.registerCommand(
